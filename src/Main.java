@@ -101,10 +101,7 @@ public class Main {
                 for (int i = 0; i < size; i++) {
                     double x = 0;
                     for (int j = 0; j < size; j++) {
-                        if (j < i) {
-                            x -= m[i][j] * currentVariableValues[j];
-                        }
-                        if (j > i) {
+                        if (j != i) {
                             x -= m[i][j] * currentVariableValues[j];
                         }
                     }
@@ -136,7 +133,7 @@ public class Main {
             System.out.println("Итерации " + k);
             System.out.println("Вычисленные неизвестные:");
             for (int i = 0; i < size; i++) {
-                printWriter.print(previousVariableValues[i] + " ");
+                printWriter.print(previousVariableValues[i] + "\n");
             }
             scanner.close();
             printWriter.close();
