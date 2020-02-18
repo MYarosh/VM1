@@ -146,6 +146,8 @@ public class Main {
             System.out.println("Нет такого файла");
         } catch(IOException e){
             System.out.println("Ошибка ввода-вывода");
+        } catch (Exception e){
+            System.out.println("Something wrong");
         }
     }
 
